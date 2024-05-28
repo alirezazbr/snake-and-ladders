@@ -1,0 +1,58 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  gap: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.ladder {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+#controls {
+  text-align: center;
+}
+
+#rollDice {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#diceResult,
+#player1Position,
+#player2Position,
+#currentPlayer {
+  margin-top: 10px;
+  font-size: 18px;
+}
